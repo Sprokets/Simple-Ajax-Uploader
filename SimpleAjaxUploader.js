@@ -815,7 +815,7 @@ ss.SimpleUpload.prototype = {
         filename = ss.getFilename( self._input.files[0].name );
         ext = ss.getExt( filename );
 
-        if ( false === self._opts.onChange.call( self, filename, ext, uploadBtn ) ) {
+        if ( false === self._opts.onChange.call( self, filename, ext, uploadBtn, self._input.files ) ) {
           return;
         }
 
